@@ -1,0 +1,23 @@
+# Disables the "Open a blank issue" link on the template chooser page.
+# Every issue must come through a template, which means every issue
+# enters the workflow with at least `Needs Triage` applied.
+# Flip to `true` if you want to allow free-form issues.
+blank_issues_enabled: false
+
+# Contact links appear on the template chooser page below the templates.
+# Use them to route requests that shouldn't become GitHub issues —
+# customer support, security disclosures, production incidents, etc.
+contact_links:
+  - name: Company X Support
+    url: https://google.com
+    about: For end-user product issues with Company X, please file a support ticket — not a GitHub issue. (Placeholder URL — update when the real support portal is live.)
+
+# Additional contact link examples — uncomment and update URLs when ready.
+#
+#   - name: Production Incident
+#     url: https://your-runbook-or-pagerduty
+#     about: For active outages, page the on-call engineer using the runbook — don't file a public issue.
+#
+#   - name: Security Disclosure
+#     url: https://your-security-policy
+#     about: For vulnerability reports, follow the responsible disclosure process — do not file a public issue.

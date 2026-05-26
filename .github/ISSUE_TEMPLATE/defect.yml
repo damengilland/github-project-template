@@ -1,0 +1,140 @@
+name: Defect
+description: A bug, regression, or something that doesn't work as intended.
+title: "[Defect]: "
+labels: ["Type: Defect", "Needs Triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a defect. Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
+      description: What's broken? What should be happening instead? Be specific about scope — one user or all users, one browser or all browsers, intermittent or consistent.
+      placeholder: |
+        When clicking "Apply discount" on the checkout page, the discount code is accepted (no error message) but the order total doesn't update. Affects all users in Safari; works correctly in Chrome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Numbered steps a fresh person could follow. Include URL, browser, user account, and environment if relevant.
+      value: |
+        1. 
+        2. 
+        3. 
+        
+        **Expected:** 
+        **Actual:** 
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know it's fixed?
+      value: |
+        - [ ] Steps above no longer reproduce the problem
+        - [ ] 
+    validations:
+      required: true
+
+  - type: dropdown
+    id: proposed-owner
+    attributes:
+      label: Proposed Owner
+      description: Which stakeholder / business driver owns this fix?
+      options:
+        - Product
+        - Marketing
+        - Sales
+        - Support
+        - Engineering
+        - Reliability
+        - Security
+        - Compliance
+    validations:
+      required: true
+
+  - type: dropdown
+    id: proposed-priority
+    attributes:
+      label: Proposed Priority
+      description: |
+        The Owner ultimately sets Priority — this is your suggestion.
+        • 0 Critical — production broken or launch blocked
+        • 1 High — must land this sprint or next
+        • 2 Normal — standard backlog pull
+        • 3 Low — opportunistic or nice-to-have
+      default: 2
+      options:
+        - "0 Critical"
+        - "1 High"
+        - "2 Normal"
+        - "3 Low"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: proposed-area
+    attributes:
+      label: Proposed Area
+      description: Which part of the app does this bug affect?
+      options:
+        - Front-end
+        - Back-end
+        - Data
+        - DevOps
+        - Mobile
+        - Design
+        - QA
+        - CMS
+        - Commerce
+        - Marketing Site
+        - Authentication
+        - User Tools
+        - Notifications
+        - Search
+        - Reporting
+        - Integrations
+        - Analytics
+        - Admin Tools
+    validations:
+      required: true
+
+  - type: textarea
+    id: external-links
+    attributes:
+      label: External Links
+      description: Slack threads, support tickets, screenshots, related issues, error logs, Sentry events.
+      placeholder: |
+        - Slack: 
+        - Support ticket: 
+        - Screenshot / video: 
+        - Error log: 
+
+  - type: textarea
+    id: assumptions
+    attributes:
+      label: Assumptions & Dependencies
+      description: What we're assuming about the cause, what we need to confirm before we can fix — access to logs, repro environment, third-party support response.
+      placeholder: |
+        - Suspect this started with last week's payments deploy
+        - Needs production log access to confirm
+        - Waiting on Stripe to confirm webhook behavior
+
+  - type: textarea
+    id: sub-tasks
+    attributes:
+      label: Sub-Tasks & Estimates
+      description: Break the fix into steps if it has multiple parts. Add t-shirt sizes or hours if known.
+      placeholder: |
+        - [ ] Reproduce reliably in staging — S
+        - [ ] Fix in code — M
+        - [ ] Regression test — S
+        - [ ] Verify in QA — S

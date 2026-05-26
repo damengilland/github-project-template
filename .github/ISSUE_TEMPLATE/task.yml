@@ -1,0 +1,113 @@
+name: Task
+description: Anything that isn't a Feature or Defect — refactors, research spikes, docs, copy changes, design work, generic to-dos.
+title: "[Task]: "
+labels: ["Needs Triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for work that doesn't fit Feature or Defect. If you're filing a feature request or a bug, please back out and use the dedicated template — the framing fields there are more useful.
+        
+        Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What needs to happen and why. Keep it brief — this template is for lightweight work.
+      placeholder: |
+        Update the Stripe SDK from 12.x to 14.x. Breaking changes in webhook signature verification — see migration guide linked below. Touches checkout and the billing admin panel.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: proposed-type
+    attributes:
+      label: Proposed Type
+      description: What kind of work is this?
+      default: 7
+      options:
+        - Enhancement
+        - Refactor
+        - Research
+        - Technical Design
+        - Design
+        - Copy
+        - Docs
+        - Task
+        - Question
+    validations:
+      required: true
+
+  - type: dropdown
+    id: proposed-owner
+    attributes:
+      label: Proposed Owner
+      description: Which stakeholder / business driver does this serve?
+      options:
+        - Product
+        - Marketing
+        - Sales
+        - Support
+        - Engineering
+        - Reliability
+        - Security
+        - Compliance
+    validations:
+      required: true
+
+  - type: dropdown
+    id: proposed-priority
+    attributes:
+      label: Proposed Priority
+      description: |
+        The Owner ultimately sets Priority — this is your suggestion.
+        • 0 Critical — production broken or launch blocked
+        • 1 High — must land this sprint or next
+        • 2 Normal — standard backlog pull
+        • 3 Low — opportunistic or nice-to-have
+      default: 2
+      options:
+        - "0 Critical"
+        - "1 High"
+        - "2 Normal"
+        - "3 Low"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: proposed-area
+    attributes:
+      label: Proposed Area
+      description: Which part of the app or which discipline picks this up?
+      options:
+        - Front-end
+        - Back-end
+        - Data
+        - DevOps
+        - Mobile
+        - Design
+        - QA
+        - CMS
+        - Commerce
+        - Marketing Site
+        - Authentication
+        - User Tools
+        - Notifications
+        - Search
+        - Reporting
+        - Integrations
+        - Analytics
+        - Admin Tools
+    validations:
+      required: true
+
+  - type: textarea
+    id: external-links
+    attributes:
+      label: External Links
+      description: Anything useful — Slack threads, docs, related issues, migration guides, Figma files.
+      placeholder: |
+        - Doc: 
+        - Slack: 
+        - Related issue: #

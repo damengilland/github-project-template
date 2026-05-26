@@ -1,0 +1,156 @@
+name: Epic
+description: A parent ticket coordinating a body of work that spans multiple sub-issues. Use sparingly — only for work big enough to need its own hub.
+title: "[Epic]: "
+labels: ["Epic", "Needs Triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Epics coordinate a body of work that spans multiple sub-issues. File the child issues separately using the Feature / Defect / Task templates, then link them in the "Child Issues" field below.
+        
+        Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
+
+  - type: textarea
+    id: business-objective
+    attributes:
+      label: Business Objective
+      description: Why are we doing this? What KPI, outcome, or dollar number are we trying to move? Write for the stakeholder, not the team.
+      placeholder: |
+        Reduce checkout abandonment from 65% to 50% by removing friction at the discount-code and shipping-method steps. Worth approximately $80k/yr in recovered revenue based on current traffic.
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      description: 'The overarching user story for the epic. Format: "As a [role], I want [goal] so that [benefit]."'
+      placeholder: |
+        As a returning shopper, I want a checkout that remembers my preferences and applies discounts automatically so that I can complete my purchase in under a minute without re-entering information.
+    validations:
+      required: true
+
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: Definition of Done
+      description: When can we close this epic? Broader than per-ticket acceptance criteria — includes outcomes, launch, and post-launch checks.
+      value: |
+        - [ ] All child issues closed
+        - [ ] Success metrics met (specify target)
+        - [ ] Launch communications sent
+        - [ ] Documentation updated
+        - [ ] 
+    validations:
+      required: true
+
+  - type: textarea
+    id: child-issues
+    attributes:
+      label: Child Issues
+      description: Link the sub-issues that make up this epic. Use `- [ ] #NNN` syntax so GitHub renders a task list that auto-checks when child issues close. Fill in as child issues get filed.
+      placeholder: |
+        - [ ] #123 — Design the new checkout flow
+        - [ ] #124 — Build the front-end form
+        - [ ] #125 — Wire up the back-end API
+        - [ ] #126 — QA pass on staging
+        - [ ] #127 — Update help docs
+
+  - type: dropdown
+    id: proposed-type
+    attributes:
+      label: Proposed Type
+      description: Most epics are Features. Pick a different Type if this epic is a large refactor or research initiative.
+      default: 0
+      options:
+        - Feature
+        - Enhancement
+        - Refactor
+        - Research
+        - Technical Design
+    validations:
+      required: true
+
+  - type: dropdown
+    id: proposed-owner
+    attributes:
+      label: Proposed Owner
+      description: Which stakeholder / business driver owns this epic? They set Priority and own the outcome.
+      options:
+        - Product
+        - Marketing
+        - Sales
+        - Support
+        - Engineering
+        - Reliability
+        - Security
+        - Compliance
+    validations:
+      required: true
+
+  - type: dropdown
+    id: proposed-priority
+    attributes:
+      label: Proposed Priority
+      description: |
+        The Owner ultimately sets Priority — this is your suggestion.
+        • 0 Critical — production broken or launch blocked
+        • 1 High — must land this sprint or next
+        • 2 Normal — standard backlog pull
+        • 3 Low — opportunistic or nice-to-have
+      default: 2
+      options:
+        - "0 Critical"
+        - "1 High"
+        - "2 Normal"
+        - "3 Low"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: proposed-area
+    attributes:
+      label: Proposed Area
+      description: Primary part of the app this epic touches. Sub-issues can be tagged with different Areas as needed.
+      options:
+        - Front-end
+        - Back-end
+        - Data
+        - DevOps
+        - Mobile
+        - Design
+        - QA
+        - CMS
+        - Commerce
+        - Marketing Site
+        - Authentication
+        - User Tools
+        - Notifications
+        - Search
+        - Reporting
+        - Integrations
+        - Analytics
+        - Admin Tools
+    validations:
+      required: true
+
+  - type: textarea
+    id: external-links
+    attributes:
+      label: External Links
+      description: Slack threads, support tickets, Figma files, customer research, related epics, KPI dashboards.
+      placeholder: |
+        - Figma: 
+        - Slack: 
+        - KPI dashboard: 
+        - Related epic: #
+
+  - type: textarea
+    id: assumptions
+    attributes:
+      label: Assumptions & Dependencies
+      description: What we're assuming, what we need before kickoff, and what other workstreams this depends on.
+      placeholder: |
+        - Assumes the new design system ships by end of Q2
+        - Depends on payments team's webhook refactor (#NNN)
+        - Needs legal sign-off on GDPR copy

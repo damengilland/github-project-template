@@ -28,8 +28,9 @@ body:
         2. 
         3. 
         
-        **Expected:** 
-        **Actual:** 
+        **Observed Outcome:**
+
+        **Expected Outcome:**
     validations:
       required: true
 

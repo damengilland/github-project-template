@@ -131,10 +131,8 @@ body:
   - type: textarea
     id: sub-tasks
     attributes:
-      label: Sub-Tasks & Estimates
-      description: Break the fix into steps if it has multiple parts. Add t-shirt sizes or hours if known.
+      label: Sub-Tasks
+      description: Break the work into a checklist of smaller steps. Sub-Tasks are the one place for to-do checkboxes.
       placeholder: |
-        - [ ] Reproduce reliably in staging — S
-        - [ ] Fix in code — M
-        - [ ] Regression test — S
-        - [ ] Verify in QA — S
+        - [ ] First step
+        - [ ] Second step

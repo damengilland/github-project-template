@@ -2,6 +2,7 @@ name: Question
 description: Needs stakeholder clarification before work can begin.
 title: "[Question]: "
 labels: ["Type: Question"]
+projects: ["damengilland/1"]
 body:
   - type: markdown
     attributes:

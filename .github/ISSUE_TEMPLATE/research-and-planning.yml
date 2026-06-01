@@ -2,6 +2,7 @@ name: Research & Planning
 description: Spikes, discovery, UX research, technical investigation, competitive analysis — plus architecture proposals, RFCs, data modeling, and requirements/acceptance specs. Output is findings or a plan.
 title: "[Research & Planning]: "
 labels: ["Type: Research & Planning"]
+projects: ["damengilland/1"]
 body:
   - type: markdown
     attributes:

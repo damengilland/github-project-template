@@ -2,6 +2,7 @@ name: Task
 description: A general administrative or non-code to-do that doesn't fit the other types.
 title: "[Task]: "
 labels: ["Type: Task"]
+projects: ["damengilland/1"]
 body:
   - type: markdown
     attributes:

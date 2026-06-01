@@ -2,6 +2,7 @@ name: Refactor
 description: Internal cleanup with no behavior change.
 title: "[Refactor]: "
 labels: ["Type: Refactor"]
+projects: ["damengilland/1"]
 body:
   - type: markdown
     attributes:

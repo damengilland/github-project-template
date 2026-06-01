@@ -24,9 +24,9 @@ body:
       label: Deliverables & Fidelity
       description: What format and fidelity do you need back? Wireframe, high-fi comp, clickable prototype, exported assets, or a design-system component?
       value: |
-        - [ ] High-fidelity comps (mobile + desktop)
-        - [ ] Exported assets
-        - [ ] Prototype link
+        - High-fidelity comps (mobile + desktop)
+        - Exported assets
+        - Prototype link
 
   - type: dropdown
     id: proposed-owner
@@ -101,3 +101,12 @@ body:
         - Figma:
         - Brand guidelines:
         - Related issue: #
+
+  - type: textarea
+    id: sub-tasks
+    attributes:
+      label: Sub-Tasks
+      description: Break the work into a checklist of smaller steps. Sub-Tasks are the one place for to-do checkboxes.
+      placeholder: |
+        - [ ] First step
+        - [ ] Second step

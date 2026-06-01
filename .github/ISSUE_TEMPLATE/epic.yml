@@ -17,10 +17,10 @@ body:
       required: true
 
   - type: textarea
-    id: child-issues
+    id: sub-tasks
     attributes:
-      label: Child Issues
-      description: Link the sub-issues. Use `- [ ] #NNN` so GitHub renders a task list that auto-checks as they close.
+      label: Sub-Tasks
+      description: Break the epic into child issues and link them. Use `- [ ] #NNN` so GitHub renders a task list that auto-checks as they close.
       placeholder: |
         - [ ] #
         - [ ] #

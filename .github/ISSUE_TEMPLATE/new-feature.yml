@@ -116,10 +116,8 @@ body:
   - type: textarea
     id: sub-tasks
     attributes:
-      label: Sub-Tasks & Estimates
-      description: Break the work into discipline-specific tasks. Add t-shirt sizes (S/M/L/XL) or hour estimates if known.
+      label: Sub-Tasks
+      description: Break the work into a checklist of smaller steps. Sub-Tasks are the one place for to-do checkboxes.
       placeholder: |
-        - [ ] Design comps — S
-        - [ ] Front-end implementation — M
-        - [ ] Back-end API — M
-        - [ ] QA pass — S
+        - [ ] First step
+        - [ ] Second step

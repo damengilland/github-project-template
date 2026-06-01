@@ -1,24 +1,32 @@
-name: Task
-description: A general administrative or non-code to-do that doesn't fit the other types.
-title: "[Task]: "
-labels: ["Type: Task", "Needs Triage"]
+name: Design
+description: Mockups, wireframes, high-fidelity comps, prototypes, design-system additions, or marketing creative. Designer-led.
+title: "[Design]: "
+labels: ["Type: Design", "Needs Triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Use this template for lightweight, general to-dos that don't fit a more specific type. If your work matches a more specific type — a bug, a design, a doc, a research spike, a copy change, and so on — please back out and use that template instead, since it applies the right Type label automatically.
-
-        Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
+        Thanks for filing a design request. Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
 
   - type: textarea
-    id: description
+    id: whats-needed
     attributes:
-      label: Description
-      description: What needs to happen and why. Keep it brief — this template is for lightweight work.
+      label: What Needs To Be Designed
+      description: The problem to solve or the asset to produce. Include the audience, the surface (screen, email, landing page), and any constraints.
       placeholder: |
-        Archive the 2023 marketing landing pages and set up redirects to the current campaign hub.
+        New empty-state for the wishlist page — illustration plus a one-line prompt to start browsing. Needs mobile and desktop. Must use the existing design-system color tokens.
     validations:
       required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Deliverables & Fidelity
+      description: What format and fidelity do you need back? Wireframe, high-fi comp, clickable prototype, exported assets, or a design-system component?
+      value: |
+        - [ ] High-fidelity comps (mobile + desktop)
+        - [ ] Exported assets
+        - [ ] Prototype link
 
   - type: dropdown
     id: proposed-owner
@@ -60,7 +68,8 @@ body:
     id: proposed-area
     attributes:
       label: Proposed Area
-      description: Which part of the app or which discipline picks this up?
+      description: Which part of the app or which discipline picks this up? Most design tickets sit under Design — change it if the work clearly belongs to another area.
+      default: 5
       options:
         - Front-end
         - Back-end
@@ -87,8 +96,8 @@ body:
     id: external-links
     attributes:
       label: External Links
-      description: Anything useful — Slack threads, docs, related issues, migration guides, Figma files.
+      description: Figma files, brand guidelines, related issues, inspiration, reference material.
       placeholder: |
-        - Doc:
-        - Slack:
+        - Figma:
+        - Brand guidelines:
         - Related issue: #

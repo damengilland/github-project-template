@@ -1,0 +1,125 @@
+name: New Feature
+description: Net-new functionality or a significant addition to existing functionality.
+title: "[New Feature]: "
+labels: ["Type: New Feature", "Needs Triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a feature request. Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
+
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      description: 'Format: "As a [role], I want [goal] so that [benefit]."'
+      placeholder: As a logged-in shopper, I want to save items to a wishlist so that I can return to them later without re-finding them.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Specific, testable conditions for "done". Use task list syntax so devs can check items off as they go.
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: dropdown
+    id: proposed-owner
+    attributes:
+      label: Proposed Owner
+      description: Which stakeholder / business driver does this serve?
+      options:
+        - Product
+        - Marketing
+        - Sales
+        - Support
+        - Engineering
+        - Reliability
+        - Security
+        - Compliance
+    validations:
+      required: true
+
+  - type: dropdown
+    id: proposed-priority
+    attributes:
+      label: Proposed Priority
+      description: |
+        The Owner ultimately sets Priority — this is your suggestion.
+        • 0 Critical — production broken or launch blocked
+        • 1 High — must land this sprint or next
+        • 2 Normal — standard backlog pull
+        • 3 Low — opportunistic or nice-to-have
+      default: 2
+      options:
+        - "0 Critical"
+        - "1 High"
+        - "2 Normal"
+        - "3 Low"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: proposed-area
+    attributes:
+      label: Proposed Area
+      description: Which part of the app or which discipline picks this up? If it spans two, pick the dominant one and note the others below.
+      options:
+        - Front-end
+        - Back-end
+        - Data
+        - DevOps
+        - Mobile
+        - Design
+        - QA
+        - CMS
+        - Commerce
+        - Marketing Site
+        - Authentication
+        - User Tools
+        - Notifications
+        - Search
+        - Reporting
+        - Integrations
+        - Analytics
+        - Admin Tools
+    validations:
+      required: true
+
+  - type: textarea
+    id: external-links
+    attributes:
+      label: External Links
+      description: Slack threads, support tickets, Figma files, related issues, customer requests.
+      placeholder: |
+        - Figma: 
+        - Slack: 
+        - Support ticket: 
+        - Related issue: #
+
+  - type: textarea
+    id: assumptions
+    attributes:
+      label: Assumptions & Dependencies
+      description: What we're assuming and what we need before we can start — decisions, access, vendor responses, design sign-off.
+      placeholder: |
+        - Assumes the new design system is live in production
+        - Blocked on legal review of GDPR copy
+        - Needs Stripe sandbox credentials
+
+  - type: textarea
+    id: sub-tasks
+    attributes:
+      label: Sub-Tasks & Estimates
+      description: Break the work into discipline-specific tasks. Add t-shirt sizes (S/M/L/XL) or hour estimates if known.
+      placeholder: |
+        - [ ] Design comps — S
+        - [ ] Front-end implementation — M
+        - [ ] Back-end API — M
+        - [ ] QA pass — S

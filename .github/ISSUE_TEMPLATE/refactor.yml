@@ -1,7 +1,7 @@
 name: Refactor
 description: Internal cleanup with no behavior change.
 title: "[Refactor]: "
-labels: ["Type: Refactor", "Needs Triage"]
+labels: ["Type: Refactor"]
 body:
   - type: markdown
     attributes:
@@ -24,9 +24,9 @@ body:
       label: Acceptance Criteria
       description: How will we know the cleanup is safe and complete?
       value: |
-        - [ ] No change in observable behavior
-        - [ ] Existing tests still pass (add characterization tests if coverage is thin)
-        - [ ]
+        - No change in observable behavior
+        - Existing tests still pass (add characterization tests if coverage is thin)
+        -
     validations:
       required: true
 

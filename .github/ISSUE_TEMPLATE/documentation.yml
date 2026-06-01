@@ -1,7 +1,7 @@
 name: Documentation
 description: READMEs, API docs, internal wikis, or runbooks.
 title: "[Documentation]: "
-labels: ["Type: Documentation", "Needs Triage"]
+labels: ["Type: Documentation"]
 body:
   - type: markdown
     attributes:
@@ -24,9 +24,9 @@ body:
       label: Acceptance Criteria
       description: How will we know the docs are done and correct?
       value: |
-        - [ ] Covers the steps end to end
-        - [ ] Reviewed by someone who didn't write it
-        - [ ]
+        - Covers the steps end to end
+        - Reviewed by someone who didn't write it
+        -
 
   - type: dropdown
     id: proposed-owner

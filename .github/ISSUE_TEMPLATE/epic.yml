@@ -1,7 +1,7 @@
 name: Epic
 description: A parent ticket that groups related issues under one body of work.
 title: "[Epic]: "
-labels: ["Type: Epic", "Needs Triage"]
+labels: ["Epic"]
 body:
   - type: markdown
     attributes:

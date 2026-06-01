@@ -1,7 +1,7 @@
 name: Defect
 description: A bug, regression, or something that doesn't work as intended.
 title: "[Defect]: "
-labels: ["Type: Defect", "Needs Triage"]
+labels: ["Type: Defect"]
 body:
   - type: markdown
     attributes:
@@ -39,8 +39,8 @@ body:
       label: Acceptance Criteria
       description: How will we know it's fixed?
       value: |
-        - [ ] Steps above no longer reproduce the problem
-        - [ ] 
+        - Steps above no longer reproduce the problem
+        - 
     validations:
       required: true
 

@@ -1,7 +1,7 @@
 name: Enhancement
 description: An improvement to an existing feature.
 title: "[Enhancement]: "
-labels: ["Type: Enhancement", "Needs Triage"]
+labels: ["Type: Enhancement"]
 body:
   - type: markdown
     attributes:
@@ -22,10 +22,10 @@ body:
     id: acceptance-criteria
     attributes:
       label: Acceptance Criteria
-      description: Specific, testable conditions for "done". Use task list syntax so devs can check items off as they go.
+      description: Specific, testable conditions for "done". One bullet per condition.
       value: |
-        - [ ]
-        - [ ]
+        -
+        -
     validations:
       required: true
 

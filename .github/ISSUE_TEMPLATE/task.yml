@@ -1,7 +1,7 @@
 name: Task
 description: A general administrative or non-code to-do that doesn't fit the other types.
 title: "[Task]: "
-labels: ["Type: Task", "Needs Triage"]
+labels: ["Type: Task"]
 body:
   - type: markdown
     attributes:

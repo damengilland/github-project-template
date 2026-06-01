@@ -1,9 +1,9 @@
 name: Auto-label from proposed dropdowns
 
 # Runs once when an issue is opened. Reads the "Proposed Owner / Priority /
-# Type / Area" sections from the issue body and applies the matching labels.
-# Doesn't remove `Needs Triage` — the triager still confirms the proposed
-# labels are correct before that flag comes off.
+# Area" sections from the issue body and applies the matching labels. The
+# Type label comes from the template's own front-matter; triage is tracked
+# by the project board's Inbox column, not a label.
 
 on:
   issues:

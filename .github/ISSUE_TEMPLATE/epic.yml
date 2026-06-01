@@ -2,6 +2,7 @@ name: Epic
 description: A parent ticket that groups related issues under one body of work.
 title: "[Epic]: "
 labels: ["Epic"]
+projects: ["damengilland/1"]
 body:
   - type: markdown
     attributes:

@@ -2,6 +2,7 @@ name: Design
 description: Mockups, wireframes, high-fidelity comps, prototypes, design-system additions, or marketing creative. Designer-led.
 title: "[Design]: "
 labels: ["Type: Design"]
+projects: ["damengilland/1"]
 body:
   - type: markdown
     attributes:

@@ -2,6 +2,7 @@ name: Documentation
 description: READMEs, API docs, internal wikis, or runbooks.
 title: "[Documentation]: "
 labels: ["Type: Documentation"]
+projects: ["damengilland/1"]
 body:
   - type: markdown
     attributes:

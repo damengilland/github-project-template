@@ -2,6 +2,7 @@ name: Bug Fix
 description: A bug, regression, or something that doesn't work as intended.
 title: "[Bug Fix]: "
 labels: ["Type: Bug Fix"]
+projects: ["damengilland/1"]
 body:
   - type: markdown
     attributes:

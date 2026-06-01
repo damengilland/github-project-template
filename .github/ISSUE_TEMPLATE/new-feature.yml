@@ -2,6 +2,7 @@ name: New Feature
 description: Net-new functionality or a significant addition to existing functionality.
 title: "[New Feature]: "
 labels: ["Type: New Feature"]
+projects: ["damengilland/1"]
 body:
   - type: markdown
     attributes:

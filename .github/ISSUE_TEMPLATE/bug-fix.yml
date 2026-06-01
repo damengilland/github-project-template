@@ -1,12 +1,12 @@
-name: Defect
+name: Bug Fix
 description: A bug, regression, or something that doesn't work as intended.
-title: "[Defect]: "
-labels: ["Type: Defect"]
+title: "[Bug Fix]: "
+labels: ["Type: Bug Fix"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting a defect. Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
+        Thanks for reporting a bug. Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
 
   - type: textarea
     id: problem-statement

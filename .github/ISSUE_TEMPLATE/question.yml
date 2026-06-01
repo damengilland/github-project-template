@@ -106,3 +106,12 @@ body:
         - Doc:
         - Slack:
         - Related issue: #
+
+  - type: textarea
+    id: sub-tasks
+    attributes:
+      label: Sub-Tasks
+      description: Break the work into a checklist of smaller steps. Sub-Tasks are the one place for to-do checkboxes.
+      placeholder: |
+        - [ ] First step
+        - [ ] Second step

@@ -1,7 +1,7 @@
 name: Design
 description: Mockups, wireframes, high-fidelity comps, prototypes, design-system additions, or marketing creative. Designer-led.
 title: "[Design]: "
-labels: ["Type: Design", "Needs Triage"]
+labels: ["Type: Design"]
 body:
   - type: markdown
     attributes:

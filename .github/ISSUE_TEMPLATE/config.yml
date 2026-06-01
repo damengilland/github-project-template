@@ -1,6 +1,6 @@
 # Disables the "Open a blank issue" link on the template chooser page.
-# Every issue must come through a template, which means every issue
-# enters the workflow with at least `Needs Triage` applied.
+# Every issue must come through a template, so new issues land in the
+# project board's Inbox (triage) column for sorting and estimation.
 # Flip to `true` if you want to allow free-form issues.
 blank_issues_enabled: false
 

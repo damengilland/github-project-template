@@ -1,7 +1,7 @@
 name: Copywriting
 description: Text-only updates — microcopy edits, marketing copy, or localization strings.
 title: "[Copywriting]: "
-labels: ["Type: Copywriting", "Needs Triage"]
+labels: ["Type: Copywriting"]
 body:
   - type: markdown
     attributes:

@@ -1,7 +1,7 @@
 name: New Feature
 description: Net-new functionality or a significant addition to existing functionality.
 title: "[New Feature]: "
-labels: ["Type: New Feature", "Needs Triage"]
+labels: ["Type: New Feature"]
 body:
   - type: markdown
     attributes:
@@ -21,11 +21,11 @@ body:
     id: acceptance-criteria
     attributes:
       label: Acceptance Criteria
-      description: Specific, testable conditions for "done". Use task list syntax so devs can check items off as they go.
+      description: Specific, testable conditions for "done". One bullet per condition.
       value: |
-        - [ ] 
-        - [ ] 
-        - [ ] 
+        - 
+        - 
+        - 
     validations:
       required: true
 

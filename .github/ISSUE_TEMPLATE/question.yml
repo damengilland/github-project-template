@@ -1,7 +1,7 @@
 name: Question
 description: Needs stakeholder clarification before work can begin.
 title: "[Question]: "
-labels: ["Type: Question", "Needs Triage"]
+labels: ["Type: Question"]
 body:
   - type: markdown
     attributes:

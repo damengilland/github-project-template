@@ -1,24 +1,33 @@
-name: Task
-description: A general administrative or non-code to-do that doesn't fit the other types.
-title: "[Task]: "
-labels: ["Type: Task", "Needs Triage"]
+name: Copywriting
+description: Text-only updates — microcopy edits, marketing copy, or localization strings.
+title: "[Copywriting]: "
+labels: ["Type: Copywriting", "Needs Triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Use this template for lightweight, general to-dos that don't fit a more specific type. If your work matches a more specific type — a bug, a design, a doc, a research spike, a copy change, and so on — please back out and use that template instead, since it applies the right Type label automatically.
-
-        Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
+        Thanks for filing a copywriting request. Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
 
   - type: textarea
-    id: description
+    id: copy-change
     attributes:
-      label: Description
-      description: What needs to happen and why. Keep it brief — this template is for lightweight work.
+      label: Copy Change
+      description: Where does the text appear, what does it say now, and what should it say? Paste current and proposed copy side by side.
       placeholder: |
-        Archive the 2023 marketing landing pages and set up redirects to the current campaign hub.
+        Location: checkout → empty cart state
+        Current: "Your cart is empty."
+        Proposed: "Nothing here yet — let's fix that. Browse the new arrivals →"
     validations:
       required: true
+
+  - type: textarea
+    id: localization
+    attributes:
+      label: Localization & Notes
+      description: Does this need translating? Any character limits, tone, or brand guidelines to follow?
+      placeholder: |
+        - Needs EN, FR, DE
+        - Max 60 characters for the button label
 
   - type: dropdown
     id: proposed-owner
@@ -60,7 +69,7 @@ body:
     id: proposed-area
     attributes:
       label: Proposed Area
-      description: Which part of the app or which discipline picks this up?
+      description: Which part of the app or which discipline picks this up? If it spans two, pick the dominant one.
       options:
         - Front-end
         - Back-end
@@ -87,8 +96,8 @@ body:
     id: external-links
     attributes:
       label: External Links
-      description: Anything useful — Slack threads, docs, related issues, migration guides, Figma files.
+      description: Style guide, related issues, Slack threads, the page or screen in question.
       placeholder: |
-        - Doc:
+        - Style guide:
         - Slack:
         - Related issue: #

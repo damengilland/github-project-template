@@ -1,24 +1,38 @@
-name: Task
-description: A general administrative or non-code to-do that doesn't fit the other types.
-title: "[Task]: "
-labels: ["Type: Task", "Needs Triage"]
+name: Question
+description: Needs stakeholder clarification before work can begin.
+title: "[Question]: "
+labels: ["Type: Question", "Needs Triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Use this template for lightweight, general to-dos that don't fit a more specific type. If your work matches a more specific type — a bug, a design, a doc, a research spike, a copy change, and so on — please back out and use that template instead, since it applies the right Type label automatically.
-
-        Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
+        Use this template when work is blocked on a decision or clarification. Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
 
   - type: textarea
-    id: description
+    id: the-question
     attributes:
-      label: Description
-      description: What needs to happen and why. Keep it brief — this template is for lightweight work.
+      label: The Question
+      description: What needs clarifying? Be specific about the decision you're waiting on.
       placeholder: |
-        Archive the 2023 marketing landing pages and set up redirects to the current campaign hub.
+        Should guest checkout create a shadow account, or stay fully anonymous until the user opts in? This affects how we model orders.
     validations:
       required: true
+
+  - type: textarea
+    id: whats-blocked
+    attributes:
+      label: What's Blocked On The Answer
+      description: What work can't start (or can't finish) until this is resolved? Link the affected issues.
+      placeholder: |
+        - Blocks #142 (guest checkout build)
+        - The orders data model depends on the answer
+
+  - type: input
+    id: who-can-answer
+    attributes:
+      label: Who Can Answer
+      description: The person or team who owns this decision, if known.
+      placeholder: "@product-lead / Legal"
 
   - type: dropdown
     id: proposed-owner
@@ -60,7 +74,7 @@ body:
     id: proposed-area
     attributes:
       label: Proposed Area
-      description: Which part of the app or which discipline picks this up?
+      description: Which part of the app or which discipline does this question concern? If it spans two, pick the dominant one.
       options:
         - Front-end
         - Back-end
@@ -87,7 +101,7 @@ body:
     id: external-links
     attributes:
       label: External Links
-      description: Anything useful — Slack threads, docs, related issues, migration guides, Figma files.
+      description: Slack threads, docs, related issues, anything that frames the question.
       placeholder: |
         - Doc:
         - Slack:

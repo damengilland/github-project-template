@@ -1,19 +1,20 @@
-name: Feature
-description: Net-new functionality or a significant addition to existing functionality.
-title: "[Feature]: "
-labels: ["Type: Feature", "Needs Triage"]
+name: Refactor
+description: Internal cleanup with no behavior change.
+title: "[Refactor]: "
+labels: ["Type: Refactor", "Needs Triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for filing a feature request. Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
+        Thanks for filing a refactor. Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
 
   - type: textarea
-    id: user-story
+    id: whats-the-cleanup
     attributes:
-      label: User Story
-      description: 'Format: "As a [role], I want [goal] so that [benefit]."'
-      placeholder: As a logged-in shopper, I want to save items to a wishlist so that I can return to them later without re-finding them.
+      label: What Needs Cleanup & Why
+      description: Describe the code to be refactored and the payoff — readability, performance, testability, reduced duplication. This is internal-only; there must be no change in observable behavior.
+      placeholder: |
+        The checkout total is recalculated in three places with slightly different rounding. Extract a single `calculateOrderTotal()` helper and call it everywhere. No change to the numbers users see.
     validations:
       required: true
 
@@ -21,11 +22,11 @@ body:
     id: acceptance-criteria
     attributes:
       label: Acceptance Criteria
-      description: Specific, testable conditions for "done". Use task list syntax so devs can check items off as they go.
+      description: How will we know the cleanup is safe and complete?
       value: |
-        - [ ] 
-        - [ ] 
-        - [ ] 
+        - [ ] No change in observable behavior
+        - [ ] Existing tests still pass (add characterization tests if coverage is thin)
+        - [ ]
     validations:
       required: true
 
@@ -96,30 +97,8 @@ body:
     id: external-links
     attributes:
       label: External Links
-      description: Slack threads, support tickets, Figma files, related issues, customer requests.
+      description: Slack threads, docs, related issues, reference material.
       placeholder: |
-        - Figma: 
-        - Slack: 
-        - Support ticket: 
+        - Doc:
+        - Slack:
         - Related issue: #
-
-  - type: textarea
-    id: assumptions
-    attributes:
-      label: Assumptions & Dependencies
-      description: What we're assuming and what we need before we can start — decisions, access, vendor responses, design sign-off.
-      placeholder: |
-        - Assumes the new design system is live in production
-        - Blocked on legal review of GDPR copy
-        - Needs Stripe sandbox credentials
-
-  - type: textarea
-    id: sub-tasks
-    attributes:
-      label: Sub-Tasks & Estimates
-      description: Break the work into discipline-specific tasks. Add t-shirt sizes (S/M/L/XL) or hour estimates if known.
-      placeholder: |
-        - [ ] Design comps — S
-        - [ ] Front-end implementation — M
-        - [ ] Back-end API — M
-        - [ ] QA pass — S

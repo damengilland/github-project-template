@@ -1,22 +1,31 @@
-name: Task
-description: A general administrative or non-code to-do that doesn't fit the other types.
-title: "[Task]: "
-labels: ["Type: Task", "Needs Triage"]
+name: Enhancement
+description: An improvement to an existing feature.
+title: "[Enhancement]: "
+labels: ["Type: Enhancement", "Needs Triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Use this template for lightweight, general to-dos that don't fit a more specific type. If your work matches a more specific type — a bug, a design, a doc, a research spike, a copy change, and so on — please back out and use that template instead, since it applies the right Type label automatically.
-
-        Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
+        Thanks for filing an enhancement. Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
 
   - type: textarea
-    id: description
+    id: current-vs-desired
     attributes:
-      label: Description
-      description: What needs to happen and why. Keep it brief — this template is for lightweight work.
+      label: Current vs. Desired Behavior
+      description: What does the feature do today, and what should it do instead? Link the existing feature or issue if there is one.
       placeholder: |
-        Archive the 2023 marketing landing pages and set up redirects to the current campaign hub.
+        Today the wishlist holds up to 25 items and silently drops the oldest when you add more. Instead it should hold unlimited items and paginate at 25 per page.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Specific, testable conditions for "done". Use task list syntax so devs can check items off as they go.
+      value: |
+        - [ ]
+        - [ ]
     validations:
       required: true
 
@@ -60,7 +69,7 @@ body:
     id: proposed-area
     attributes:
       label: Proposed Area
-      description: Which part of the app or which discipline picks this up?
+      description: Which part of the app or which discipline picks this up? If it spans two, pick the dominant one and note the others below.
       options:
         - Front-end
         - Back-end
@@ -87,7 +96,7 @@ body:
     id: external-links
     attributes:
       label: External Links
-      description: Anything useful — Slack threads, docs, related issues, migration guides, Figma files.
+      description: Slack threads, docs, Figma files, related issues, reference material.
       placeholder: |
         - Doc:
         - Slack:

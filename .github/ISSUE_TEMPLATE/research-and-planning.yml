@@ -1,0 +1,118 @@
+name: Research & Planning
+description: Spikes, discovery, UX research, technical investigation, competitive analysis — plus architecture proposals, RFCs, data modeling, and requirements/acceptance specs. Output is findings or a plan.
+title: "[Research & Planning]: "
+labels: ["Type: Research & Planning", "Needs Triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for time-boxed investigation (spikes, discovery, UX or competitive research) and for up-front planning work (architecture proposals, RFCs, data modeling, requirements and acceptance specs). The output is findings or a plan that feeds implementation tickets — not shipped product code.
+
+        Required fields are marked with an asterisk. The "Proposed" dropdowns capture your suggestion — the triager will confirm or adjust the actual labels during triage.
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What are we trying to learn, decide, or design? State the question or the problem, and who consumes the result.
+      placeholder: |
+        Decide how to support multi-channel notifications (email, push, SMS) with per-user preferences, and produce a data model + API contract for the implementation team.
+        — or —
+        Can we move image encoding client-side without regressing upload times on low-end Android?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope-and-output
+    attributes:
+      label: Scope & Expected Output
+      description: What artifact does this produce? Check what applies and add specifics.
+      value: |
+        - [ ] Written findings / recommendation
+        - [ ] Proposed architecture or approach
+        - [ ] Data model & API contracts
+        - [ ] Alternatives considered & trade-offs
+        - [ ] Acceptance criteria for implementation tickets
+        - [ ] Prototype or benchmark
+    validations:
+      required: true
+
+  - type: input
+    id: time-box
+    attributes:
+      label: Time-box
+      description: For spikes and investigations, how much time is allotted before we stop and report? Leave blank for open-ended planning work.
+      placeholder: "2 days"
+
+  - type: dropdown
+    id: proposed-owner
+    attributes:
+      label: Proposed Owner
+      description: Which stakeholder / business driver does this serve?
+      options:
+        - Product
+        - Marketing
+        - Sales
+        - Support
+        - Engineering
+        - Reliability
+        - Security
+        - Compliance
+    validations:
+      required: true
+
+  - type: dropdown
+    id: proposed-priority
+    attributes:
+      label: Proposed Priority
+      description: |
+        The Owner ultimately sets Priority — this is your suggestion.
+        • 0 Critical — production broken or launch blocked
+        • 1 High — must land this sprint or next
+        • 2 Normal — standard backlog pull
+        • 3 Low — opportunistic or nice-to-have
+      default: 2
+      options:
+        - "0 Critical"
+        - "1 High"
+        - "2 Normal"
+        - "3 Low"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: proposed-area
+    attributes:
+      label: Proposed Area
+      description: Which part of the app or which discipline does this concern? If it spans two, pick the dominant one.
+      options:
+        - Front-end
+        - Back-end
+        - Data
+        - DevOps
+        - Mobile
+        - Design
+        - QA
+        - CMS
+        - Commerce
+        - Marketing Site
+        - Authentication
+        - User Tools
+        - Notifications
+        - Search
+        - Reporting
+        - Integrations
+        - Analytics
+        - Admin Tools
+    validations:
+      required: true
+
+  - type: textarea
+    id: external-links
+    attributes:
+      label: External Links
+      description: Prior art, related RFCs or designs, Slack threads, docs, related issues.
+      placeholder: |
+        - Doc:
+        - Slack:
+        - Related issue: #
